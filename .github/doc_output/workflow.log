@@ -1,0 +1,120 @@
+[2026-08-20T23:52:58] [INFO    ] ==============================================================
+[2026-08-20T23:52:58] [INFO    ]   Documentation Workflow Runner — Starting
+[2026-08-20T23:52:58] [INFO    ]   Target : /nfs/site/disks/pds_ddi.work.004/smdhasim/WW34_training/Day2/T1_agent_skills/Day2_AI-Engineering-Team/workflow/sample_codebase
+[2026-08-20T23:52:58] [INFO    ]   Output : /nfs/site/disks/pds_ddi.work.004/smdhasim/WW34_training/Day2/T1_agent_skills/Day2_AI-Engineering-Team/doc_output
+[2026-08-20T23:52:58] [INFO    ] ==============================================================
+[2026-08-20T23:52:58] [INFO    ] ═══ Phase 1: Scope Identification ═══
+[2026-08-20T23:52:58] [DEBUG   ]   Scanning: __init__.py
+[2026-08-20T23:52:58] [DEBUG   ]   Scanning: log_parser.py
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef '_parse_timestamp' line 67
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef '_detect_tool' line 77
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef 'parse_eda_log' line 90
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef 'extract_errors' line 111
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef 'extract_warnings' line 115
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef 'group_by_code' line 119
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef 'top_error_codes' line 126
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef 'filter_by_stage' line 132
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef 'summarise' line 137
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef '__init__' line 23
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef 'is_warning' line 43
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef '__repr__' line 46
+[2026-08-20T23:52:58] [DEBUG   ]   Scanning: test_result_analyzer.py
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: ClassDef 'RegressionRun' line 41
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef 'parse_csv_results' line 59
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef 'parse_json_results' line 76
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef 'group_failures_by_error_code' line 97
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef 'top_failure_codes' line 105
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef 'compare_runs' line 111
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef 'slowest_tests' line 121
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef 'filter_by_tag' line 125
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef 'build_summary_report' line 129
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef 'failed' line 36
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef 'pass_rate' line 45
+[2026-08-20T23:52:58] [DEBUG   ]     MISSING DOC: FunctionDef 'failures' line 51
+[2026-08-20T23:52:58] [INFO    ]   Files=3  Symbols=28  Undocumented=24  Coverage=14.3%
+[2026-08-20T23:52:58] [INFO    ]   ✓ scope_identification → file_analysis
+
+[2026-08-20T23:52:58] [INFO    ] ═══ Phase 2: File / Logic Analysis ═══
+[2026-08-20T23:52:58] [DEBUG   ]   log_parser.py::_parse_timestamp(line) -> Optional[datetime]
+[2026-08-20T23:52:58] [DEBUG   ]   log_parser.py::_detect_tool(filepath) -> str
+[2026-08-20T23:52:58] [DEBUG   ]   log_parser.py::parse_eda_log(filepath) -> List[LogEntry]
+[2026-08-20T23:52:58] [DEBUG   ]   log_parser.py::extract_errors(entries) -> List[LogEntry]
+[2026-08-20T23:52:58] [DEBUG   ]   log_parser.py::extract_warnings(entries) -> List[LogEntry]
+[2026-08-20T23:52:58] [DEBUG   ]   log_parser.py::group_by_code(entries) -> Dict[str, List[LogEntry]]
+[2026-08-20T23:52:58] [DEBUG   ]   log_parser.py::top_error_codes(entries, n) -> List[tuple]
+[2026-08-20T23:52:58] [DEBUG   ]   log_parser.py::filter_by_stage(entries, stage_keyword) -> List[LogEntry]
+[2026-08-20T23:52:58] [DEBUG   ]   log_parser.py::summarise(entries) -> Dict[str, int]
+[2026-08-20T23:52:58] [DEBUG   ]   log_parser.py::__init__(timestamp, level, tool, code, message, line_number) -> None
+[2026-08-20T23:52:58] [DEBUG   ]   log_parser.py::is_error() -> bool
+[2026-08-20T23:52:58] [DEBUG   ]   log_parser.py::is_warning() -> bool
+[2026-08-20T23:52:58] [DEBUG   ]   log_parser.py::__repr__() -> str
+[2026-08-20T23:52:58] [DEBUG   ]   test_result_analyzer.py::parse_csv_results(filepath) -> RegressionRun
+[2026-08-20T23:52:58] [DEBUG   ]   test_result_analyzer.py::parse_json_results(filepath) -> RegressionRun
+[2026-08-20T23:52:58] [DEBUG   ]   test_result_analyzer.py::group_failures_by_error_code(run) -> Dict[str, List[TestResult]]
+[2026-08-20T23:52:58] [DEBUG   ]   test_result_analyzer.py::top_failure_codes(run, n) -> List[Tuple[str, int]]
+[2026-08-20T23:52:58] [DEBUG   ]   test_result_analyzer.py::compare_runs(baseline, current) -> Dict[str, List[str]]
+[2026-08-20T23:52:58] [DEBUG   ]   test_result_analyzer.py::slowest_tests(run, n) -> List[TestResult]
+[2026-08-20T23:52:58] [DEBUG   ]   test_result_analyzer.py::filter_by_tag(run, tag) -> List[TestResult]
+[2026-08-20T23:52:58] [DEBUG   ]   test_result_analyzer.py::build_summary_report(run) -> Dict
+[2026-08-20T23:52:58] [DEBUG   ]   test_result_analyzer.py::passed() -> bool
+[2026-08-20T23:52:58] [DEBUG   ]   test_result_analyzer.py::failed() -> bool
+[2026-08-20T23:52:58] [DEBUG   ]   test_result_analyzer.py::pass_rate() -> float
+[2026-08-20T23:52:58] [DEBUG   ]   test_result_analyzer.py::failures() -> List[TestResult]
+[2026-08-20T23:52:58] [INFO    ]   Analysed 3 file(s)
+[2026-08-20T23:52:58] [INFO    ]   ✓ file_analysis → inline_doc
+
+[2026-08-20T23:52:58] [INFO    ] ═══ Phase 3: Inline Doc Application ═══
+[2026-08-20T23:52:58] [DEBUG   ]   __init__.py — fully documented, no changes needed
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → _parse_timestamp() at body line 68
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → _detect_tool() at body line 78
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → parse_eda_log() at body line 91
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → extract_errors() at body line 112
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → extract_warnings() at body line 116
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → group_by_code() at body line 120
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → top_error_codes() at body line 127
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → filter_by_stage() at body line 133
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → summarise() at body line 138
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → __init__() at body line 32
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → is_warning() at body line 44
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → __repr__() at body line 47
+[2026-08-20T23:52:58] [INFO    ]   Patched: log_parser.py (12 docstring(s) added)
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → RegressionRun() at body line 42
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → parse_csv_results() at body line 60
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → parse_json_results() at body line 77
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → group_failures_by_error_code() at body line 98
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → top_failure_codes() at body line 106
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → compare_runs() at body line 112
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → slowest_tests() at body line 122
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → filter_by_tag() at body line 126
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → build_summary_report() at body line 130
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → failed() at body line 37
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → pass_rate() at body line 46
+[2026-08-20T23:52:58] [DEBUG   ]     + docstring → failures() at body line 52
+[2026-08-20T23:52:58] [INFO    ]   Patched: test_result_analyzer.py (12 docstring(s) added)
+[2026-08-20T23:52:58] [INFO    ]   Total files patched: 2
+[2026-08-20T23:52:58] [INFO    ]   ✓ inline_doc → sphinx_build
+
+[2026-08-20T23:52:58] [INFO    ] ═══ Phase 4: Sphinx Automation & Generation ═══
+[2026-08-20T23:52:58] [DEBUG   ]   conf.py → /nfs/site/disks/pds_ddi.work.004/smdhasim/WW34_training/Day2/T1_agent_skills/Day2_AI-Engineering-Team/doc_output/docs/source/conf.py
+[2026-08-20T23:52:58] [INFO    ]   sphinx-apidoc not found — generating .rst files from scope manifest
+[2026-08-20T23:52:58] [DEBUG   ]   Generated __init__.rst
+[2026-08-20T23:52:58] [DEBUG   ]   Generated log_parser.rst
+[2026-08-20T23:52:58] [DEBUG   ]   Generated test_result_analyzer.rst
+[2026-08-20T23:52:58] [DEBUG   ]   index.rst → /nfs/site/disks/pds_ddi.work.004/smdhasim/WW34_training/Day2/T1_agent_skills/Day2_AI-Engineering-Team/doc_output/docs/source/index.rst
+[2026-08-20T23:52:58] [INFO    ]   sphinx-build not found — .rst source ready at /nfs/site/disks/pds_ddi.work.004/smdhasim/WW34_training/Day2/T1_agent_skills/Day2_AI-Engineering-Team/doc_output/docs/source
+[2026-08-20T23:52:58] [INFO    ]   Sphinx artifacts at: /nfs/site/disks/pds_ddi.work.004/smdhasim/WW34_training/Day2/T1_agent_skills/Day2_AI-Engineering-Team/doc_output/docs
+[2026-08-20T23:52:58] [INFO    ]   ✓ sphinx_build → review
+
+[2026-08-20T23:52:58] [INFO    ] ═══ Phase 5: Review & Maintenance ═══
+[2026-08-20T23:52:58] [INFO    ]   Coverage : 14.3% → 100.0%  (Δ +85.7%)
+[2026-08-20T23:52:58] [INFO    ]   Patched  : 2 file(s)
+[2026-08-20T23:52:58] [INFO    ]   Remaining undocumented: 0
+[2026-08-20T23:52:58] [INFO    ]   Report   : /nfs/site/disks/pds_ddi.work.004/smdhasim/WW34_training/Day2/T1_agent_skills/Day2_AI-Engineering-Team/doc_output/coverage_report.json
+[2026-08-20T23:52:58] [INFO    ]   ✓ review → done
+
+[2026-08-20T23:52:58] [INFO    ] ==============================================================
+[2026-08-20T23:52:58] [INFO    ]   Workflow COMPLETE
+[2026-08-20T23:52:58] [INFO    ]   Doc coverage : 14.3% → 100.0%
+[2026-08-20T23:52:58] [INFO    ]   Files patched: 2
+[2026-08-20T23:52:58] [INFO    ]   Log          : /nfs/site/home/smdhasim/pds_disk/WW34_training/Day2/T1_agent_skills/Day2_AI-Engineering-Team/doc_output/workflow.log
+[2026-08-20T23:52:58] [INFO    ] ==============================================================

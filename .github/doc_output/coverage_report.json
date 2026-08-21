@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-08-21T06:52:58.391159Z",
+  "coverage_before_pct": 14.3,
+  "coverage_after_pct": 100.0,
+  "coverage_delta_pct": 85.7,
+  "total_symbols": 28,
+  "remaining_undoc": 0,
+  "patched_files": [
+    "log_parser.py",
+    "test_result_analyzer.py"
+  ],
+  "stale_files": [],
+  "workflow_errors": []
+}
