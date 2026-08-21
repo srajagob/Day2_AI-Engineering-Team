@@ -1,17 +1,19 @@
-# AGENTS
+# Agents
 
 Five specialist agents that compose the engineering investigation workflow. Each
 agent is bounded (explicit out-of-scope list, budgets, stop conditions), reviewable
 (fixed output contract + review checklist), and reuses the shared skills in
-[SKILLS/](../SKILLS).
+[../skills/](../skills/SKILL.md).
 
-| Agent | Folder | Deliverable | Entry gate |
+VS Code discovers these automatically from `.github/agents/*.agent.md`.
+
+| Agent | File | Deliverable | Entry gate |
 |---|---|---|---|
-| Requirements Agent | [requirements-agent](requirements-agent/requirements-agent.agent.md) | `IRB` + traceability matrix | Any new request |
-| Debugging Agent | [debugging-agent](debugging-agent/debugging-agent.agent.md) | `IR` investigation report | `IRB` status `READY` |
-| Feature Agent | [feature-agent](feature-agent/feature-agent.agent.md) | `FP` feature proposal | `IRB` with acceptance criteria |
-| Refactoring Agent | [refactoring-agent](refactoring-agent/refactoring-agent.agent.md) | `RFP` refactoring plan & record | Green baseline + tests exist |
-| Documentation Agent | [documentation-agent](documentation-agent/documentation-agent.agent.md) | `DOC` engineering document | A pinned revision |
+| Requirements Agent | [requirements-agent.agent.md](requirements-agent.agent.md) | `IRB` + traceability matrix | Any new request |
+| Debugging Agent | [debugging-agent.agent.md](debugging-agent.agent.md) | `IR` investigation report | `IRB` status `READY` |
+| Feature Agent | [feature-agent.agent.md](feature-agent.agent.md) | `FP` feature proposal | `IRB` with acceptance criteria |
+| Refactoring Agent | [refactoring-agent.agent.md](refactoring-agent.agent.md) | `RFP` refactoring plan & record | Green baseline + tests exist |
+| Documentation Agent | [documentation-agent.agent.md](documentation-agent.agent.md) | `DOC` engineering document | A pinned revision |
 
 ## Agent x Skill matrix
 
@@ -19,16 +21,18 @@ Numbers show the order in which each agent invokes the skill (`\u2013` = not use
 
 | Skill | Requirements | Debugging | Feature | Refactoring | Documentation |
 |---|---|---|---|---|---|
-| [1 \u2014 Log & Evidence Parsing](../SKILLS/skill-1-log-evidence-parsing.md) | 2 | 1 | 4 | 3 | 4 |
-| [2 \u2014 Code Search & Context Retrieval](../SKILLS/skill-2-code-search-context-retrieval.md) | 3 | 4 | 2 | 1 | 2 |
-| [3 \u2014 Historical Pattern Lookup](../SKILLS/skill-3-historical-pattern-lookup.md) | 1 | 2 | 1 | 2 | 1 |
-| [4 \u2014 Configuration Analysis](../SKILLS/skill-4-configuration-analysis.md) | 4 | 3 | 3 | 4 | 3 |
-| [5 \u2014 Structured Report Generation](../SKILLS/skill-5-structured-report-generation.md) | 5 | 5 | 5 | 5 | 5 |
+| [1 — Log & Evidence Parsing](../skills/skill-1-log-evidence-parsing.md) | 2 | 1 | 4 | 3 | 4 |
+| [2 — Code Search & Context Retrieval](../skills/skill-2-code-search-context-retrieval.md) | 3 | 4 | 2 | 1 | 2 |
+| [3 — Historical Pattern Lookup](../skills/skill-3-historical-pattern-lookup.md) | 1 | 2 | 1 | 2 | 1 |
+| [4 — Configuration Analysis](../skills/skill-4-configuration-analysis.md) | 4 | 3 | 3 | 4 | 3 |
+| [5 — Structured Report Generation](../skills/skill-5-structured-report-generation.md) | 5 | 5 | 5 | 5 | 5 |
 
 Two cross-cutting skills are available to every agent:
 
-- [requirement.md](../SKILLS/requirement.md) \u2014 investigation requirement gathering (`IRB`)
-- [rollback-and-recovery.md](../SKILLS/rollback-and-recovery.md) \u2014 checkpoint, revert, attempt budgets (`RER`)
+- [requirement.md](../skills/requirement.md) — investigation requirement gathering (`IRB`)
+- [rollback-and-recovery.md](../skills/rollback-and-recovery.md) — checkpoint, revert, attempt budgets (`RER`)
+
+Full index: [../skills/SKILL.md](../skills/SKILL.md)
 
 ## Artifact flow
 
@@ -87,7 +91,7 @@ Every agent in this folder obeys the same rules:
 
 ## Using these with VS Code
 
-VS Code discovers custom agents from `.github/agents/*.agent.md`. To activate one
-here, copy or symlink the desired `*.agent.md` file into `.github/agents/`, or move
-the folder contents there. Skills are discovered from `SKILL.md` files; the files in
-[SKILLS/](../SKILLS) carry compatible YAML frontmatter (`name`, `description`).
+VS Code discovers custom agents from `.github/agents/*.agent.md` and skills from
+`.github/skills/`. Both folders are already in their discoverable locations, so no
+copying is required. Every skill file carries YAML frontmatter (`name`,
+`description`); see [../skills/SKILL.md](../skills/SKILL.md) for the full index.

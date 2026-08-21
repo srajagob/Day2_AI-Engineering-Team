@@ -8,22 +8,25 @@ conditions).
 ## Layout
 
 ```
-AGENTS/                          5 specialist agents (one sub-folder each)
-  requirements-agent/            intake, IRB, traceability
-  debugging-agent/               failure -> evidence-backed root cause
-  feature-agent/                 capability request -> feature proposal
-  refactoring-agent/             behaviour-preserving structure changes
-  documentation-agent/           verified engineering documentation
-  README.md                      agent x skill matrix and artifact flow
-SKILLS/                          shared capabilities used by all agents
-  skill-1-log-evidence-parsing.md
-  skill-2-code-search-context-retrieval.md
-  skill-3-historical-pattern-lookup.md
-  skill-4-configuration-analysis.md
-  skill-5-structured-report-generation.md
-  requirement.md                 investigation requirement gathering (IRB)
-  rollback-and-recovery.md       checkpoint / revert / attempt budgets (RER)
+.github/
+  agents/                        5 specialist agents (auto-discovered by VS Code)
+    requirements-agent.agent.md  intake, IRB, traceability
+    debugging-agent.agent.md     failure -> evidence-backed root cause
+    feature-agent.agent.md       capability request -> feature proposal
+    refactoring-agent.agent.md   behaviour-preserving structure changes
+    documentation-agent.agent.md verified engineering documentation
+    README.md                    agent x skill matrix and artifact flow
+  skills/                        shared capabilities used by all agents
+    SKILL.md                     index of every skill + selection guide
+    skill-1-log-evidence-parsing.md
+    skill-2-code-search-context-retrieval.md
+    skill-3-historical-pattern-lookup.md
+    skill-4-configuration-analysis.md
+    skill-5-structured-report-generation.md
+    requirement.md               investigation requirement gathering (IRB)
+    rollback-and-recovery.md     checkpoint / revert / attempt budgets (RER)
 ```
 
-Start with [AGENTS/README.md](AGENTS/README.md) for the agent x skill matrix,
-artifact flow and shared invariants.
+Start with [.github/agents/README.md](.github/agents/README.md) for the agent x skill
+matrix, artifact flow and shared invariants, or
+[.github/skills/SKILL.md](.github/skills/SKILL.md) for the skill index.

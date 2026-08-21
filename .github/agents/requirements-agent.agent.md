@@ -44,7 +44,7 @@ You do not implement, debug or refactor.
 
 ## 4. Workflow
 
-The full intake procedure is defined in [SKILLS/requirement.md](../../SKILLS/requirement.md).
+The full intake procedure is defined in [requirement.md](../skills/requirement.md).
 This agent executes it and adds traceability:
 
 1. **Classify** the request: `INVESTIGATION` (see IRB types) or `CAPABILITY`.
@@ -60,7 +60,7 @@ This agent executes it and adds traceability:
 
 ## 5. Output \u2014 IRB + Traceability Matrix
 
-The IRB template is defined in [SKILLS/requirement.md](../../SKILLS/requirement.md). This agent additionally emits:
+The IRB template is defined in [requirement.md](../skills/requirement.md). This agent additionally emits:
 
 ```markdown
 ## Requirements register
