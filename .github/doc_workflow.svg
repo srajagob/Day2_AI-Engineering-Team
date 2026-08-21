@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 920" width="1600" height="920" font-family="Segoe UI, Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="1600" height="920" fill="#F4F7FB"/>
+
+  <!-- Title -->
+  <text x="800" y="46" text-anchor="middle" font-size="26" font-weight="bold" fill="#0D1B2A">End-to-End Documentation Workflow</text>
+  <text x="800" y="72" text-anchor="middle" font-size="15" fill="#556677" font-style="italic">Documentation Agent — EDA / Silicon Engineering Team</text>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PHASE BOXES  (y=100 top, height=330)
+       Phase widths=240, gaps=32, total=5*240+4*32=1328, startX=136
+  ════════════════════════════════════════════════════════════════ -->
+
+  <!-- Phase 1: Scope Identification (manual) -->
+  <rect x="136" y="100" width="240" height="330" rx="10" fill="#D6E4F0" stroke="#2C3E50" stroke-width="2"/>
+  <rect x="136" y="100" width="240" height="46" rx="10" fill="#1F3A5F" stroke="#2C3E50" stroke-width="2"/>
+  <rect x="136" y="126" width="240" height="20" fill="#1F3A5F"/><!-- square off bottom corners of header -->
+  <text x="256" y="129" text-anchor="middle" font-size="13" font-weight="bold" fill="white">① Scope Identification</text>
+  <text x="156" y="168" font-size="12" fill="#1A1A2E">• Ingest ticket / PR / task</text>
+  <text x="156" y="192" font-size="12" fill="#1A1A2E">• Identify modules in scope</text>
+  <text x="156" y="216" font-size="12" fill="#1A1A2E">• List target files &amp; APIs</text>
+  <text x="156" y="240" font-size="12" fill="#1A1A2E">• Flag undocumented symbols</text>
+  <text x="156" y="264" font-size="12" fill="#1A1A2E">• Define doc coverage goals</text>
+  <rect x="156" y="392" width="200" height="26" rx="5" fill="#1F3A5F"/>
+  <text x="256" y="410" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Output: scope manifest</text>
+
+  <!-- Phase 2: File/Logic Analysis (AGENT) -->
+  <rect x="408" y="100" width="240" height="330" rx="10" fill="#FADBD8" stroke="#C0392B" stroke-width="2.5"/>
+  <rect x="408" y="100" width="240" height="46" rx="10" fill="#C0392B" stroke="#C0392B" stroke-width="2.5"/>
+  <rect x="408" y="126" width="240" height="20" fill="#C0392B"/>
+  <text x="528" y="129" text-anchor="middle" font-size="13" font-weight="bold" fill="white">② File / Logic Analysis</text>
+  <text x="428" y="168" font-size="12" fill="#1A1A2E">• Parse source code (AST)</text>
+  <text x="428" y="192" font-size="12" fill="#1A1A2E">• Extract function signatures</text>
+  <text x="428" y="216" font-size="12" fill="#1A1A2E">• Trace call graphs</text>
+  <text x="428" y="240" font-size="12" fill="#1A1A2E">• Identify module dependencies</text>
+  <text x="428" y="264" font-size="12" fill="#1A1A2E">• Score doc completeness</text>
+  <rect x="428" y="392" width="200" height="26" rx="5" fill="#C0392B"/>
+  <text x="528" y="410" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Output: annotated code map</text>
+  <!-- Agent badge -->
+  <rect x="428" y="278" width="200" height="22" rx="4" fill="#F1948A"/>
+  <text x="528" y="293" text-anchor="middle" font-size="10.5" fill="#7B241C" font-weight="bold">🤖 Agent: Code Search Skill</text>
+
+  <!-- Phase 3: Inline Doc Application (AGENT) -->
+  <rect x="680" y="100" width="240" height="330" rx="10" fill="#FADBD8" stroke="#C0392B" stroke-width="2.5"/>
+  <rect x="680" y="100" width="240" height="46" rx="10" fill="#C0392B" stroke="#C0392B" stroke-width="2.5"/>
+  <rect x="680" y="126" width="240" height="20" fill="#C0392B"/>
+  <text x="800" y="129" text-anchor="middle" font-size="13" font-weight="bold" fill="white">③ Inline Doc Application</text>
+  <text x="700" y="168" font-size="12" fill="#1A1A2E">• Generate docstrings (NLP)</text>
+  <text x="700" y="192" font-size="12" fill="#1A1A2E">• Apply to functions/classes</text>
+  <text x="700" y="216" font-size="12" fill="#1A1A2E">• Insert param/return/raises tags</text>
+  <text x="700" y="240" font-size="12" fill="#1A1A2E">• Cross-link related modules</text>
+  <text x="700" y="264" font-size="12" fill="#1A1A2E">• Version-stamp each docstring</text>
+  <rect x="700" y="392" width="200" height="26" rx="5" fill="#C0392B"/>
+  <text x="800" y="410" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Output: patched source files</text>
+  <!-- Agent badge -->
+  <rect x="700" y="278" width="200" height="22" rx="4" fill="#F1948A"/>
+  <text x="800" y="293" text-anchor="middle" font-size="10.5" fill="#7B241C" font-weight="bold">🤖 Agent: Log Parsing + Report Gen</text>
+
+  <!-- Phase 4: Sphinx Automation (AGENT) -->
+  <rect x="952" y="100" width="240" height="330" rx="10" fill="#FADBD8" stroke="#C0392B" stroke-width="2.5"/>
+  <rect x="952" y="100" width="240" height="46" rx="10" fill="#C0392B" stroke="#C0392B" stroke-width="2.5"/>
+  <rect x="952" y="126" width="240" height="20" fill="#C0392B"/>
+  <text x="1072" y="129" text-anchor="middle" font-size="13" font-weight="bold" fill="white">④ Sphinx Automation</text>
+  <text x="972" y="168" font-size="12" fill="#1A1A2E">• Run sphinx-apidoc</text>
+  <text x="972" y="192" font-size="12" fill="#1A1A2E">• Build .rst from docstrings</text>
+  <text x="972" y="216" font-size="12" fill="#1A1A2E">• Generate HTML / PDF output</text>
+  <text x="972" y="240" font-size="12" fill="#1A1A2E">• Embed call-graph diagrams</text>
+  <text x="972" y="264" font-size="12" fill="#1A1A2E">• Publish to docs portal</text>
+  <rect x="972" y="392" width="200" height="26" rx="5" fill="#C0392B"/>
+  <text x="1072" y="410" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Output: published docs site</text>
+  <!-- Agent badge -->
+  <rect x="972" y="278" width="200" height="22" rx="4" fill="#F1948A"/>
+  <text x="1072" y="293" text-anchor="middle" font-size="10.5" fill="#7B241C" font-weight="bold">🤖 Agent: Config + Report Gen Skill</text>
+
+  <!-- Phase 5: Review and Maintenance (manual) -->
+  <rect x="1224" y="100" width="240" height="330" rx="10" fill="#D6E4F0" stroke="#2C3E50" stroke-width="2"/>
+  <rect x="1224" y="100" width="240" height="46" rx="10" fill="#1F3A5F" stroke="#2C3E50" stroke-width="2"/>
+  <rect x="1224" y="126" width="240" height="20" fill="#1F3A5F"/>
+  <text x="1344" y="129" text-anchor="middle" font-size="13" font-weight="bold" fill="white">⑤ Review &amp; Maintenance</text>
+  <text x="1244" y="168" font-size="12" fill="#1A1A2E">• Diff new vs old docs</text>
+  <text x="1244" y="192" font-size="12" fill="#1A1A2E">• Flag stale docstrings</text>
+  <text x="1244" y="216" font-size="12" fill="#1A1A2E">• Raise review PR / comment</text>
+  <text x="1244" y="240" font-size="12" fill="#1A1A2E">• Track doc coverage %</text>
+  <text x="1244" y="264" font-size="12" fill="#1A1A2E">• Sign off and archive</text>
+  <rect x="1244" y="392" width="200" height="26" rx="5" fill="#1F3A5F"/>
+  <text x="1344" y="410" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Output: maintenance report</text>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HORIZONTAL ARROWS between phases
+  ════════════════════════════════════════════════════════════════ -->
+  <!-- Arrow 1→2 -->
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1F3A5F"/>
+    </marker>
+    <marker id="arr-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#E67E22"/>
+    </marker>
+    <marker id="arr-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#C0392B"/>
+    </marker>
+    <marker id="arr-left" markerWidth="10" markerHeight="7" refX="1" refY="3.5" orient="auto">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#E67E22"/>
+    </marker>
+  </defs>
+  <line x1="376" y1="265" x2="406" y2="265" stroke="#1F3A5F" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="648" y1="265" x2="678" y2="265" stroke="#1F3A5F" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="920" y1="265" x2="950" y2="265" stroke="#1F3A5F" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="1192" y1="265" x2="1222" y2="265" stroke="#1F3A5F" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       DOCUMENTATION AGENT INTERACTION RAIL
+  ════════════════════════════════════════════════════════════════ -->
+  <rect x="408" y="460" width="784" height="62" rx="10" fill="#FADBD8" stroke="#C0392B" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="800" y="488" text-anchor="middle" font-size="14" font-weight="bold" fill="#C0392B">🤖  Documentation Agent  —  Active at phases  ②  ③  ④</text>
+  <text x="800" y="510" text-anchor="middle" font-size="11" fill="#7B241C">Reads: source code, logs, config  |  Writes: docstrings, reports, .rst files</text>
+
+  <!-- Vertical connector arrows agent rail ↔ phases 2,3,4 -->
+  <line x1="528" y1="460" x2="528" y2="432" stroke="#C0392B" stroke-width="2" marker-end="url(#arr-red)" stroke-dasharray="5,3"/>
+  <line x1="800" y1="460" x2="800" y2="432" stroke="#C0392B" stroke-width="2" marker-end="url(#arr-red)" stroke-dasharray="5,3"/>
+  <line x1="1072" y1="460" x2="1072" y2="432" stroke="#C0392B" stroke-width="2" marker-end="url(#arr-red)" stroke-dasharray="5,3"/>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FEEDBACK / MAINTENANCE LOOP  (Phase 5 → Phase 1, top arc)
+  ════════════════════════════════════════════════════════════════ -->
+  <path d="M 1344 100 Q 1344 60 800 60 Q 256 60 256 100"
+        fill="none" stroke="#E67E22" stroke-width="2.5"
+        stroke-dasharray="10,5" marker-end="url(#arr-orange)"/>
+  <text x="800" y="52" text-anchor="middle" font-size="11" fill="#E67E22" font-style="italic">Maintenance feedback loop — stale docs trigger re-scope</text>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       REUSABLE SKILLS STRIP
+  ════════════════════════════════════════════════════════════════ -->
+  <rect x="136" y="554" width="1328" height="68" rx="8" fill="#EAF2FF" stroke="#2471A3" stroke-width="1.5"/>
+  <text x="800" y="578" text-anchor="middle" font-size="13" font-weight="bold" fill="#1A5276">Reusable Skills Invoked Across the Workflow</text>
+  <text x="800" y="606" text-anchor="middle" font-size="11.5" fill="#1A5276">
+    Skill 1: Log &amp; Evidence Parsing  │  Skill 2: Code Search &amp; Context Retrieval  │  Skill 3: Historical Pattern Lookup  │  Skill 4: Configuration Analysis  │  Skill 5: Structured Report Generation
+  </text>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SKILLS → PHASES MAPPING TABLE
+  ════════════════════════════════════════════════════════════════ -->
+  <!-- Table header -->
+  <rect x="136" y="644" width="1328" height="34" rx="0" fill="#1F3A5F"/>
+  <text x="320" y="666" text-anchor="middle" font-size="11.5" fill="white" font-weight="bold">Skill</text>
+  <text x="540" y="666" text-anchor="middle" font-size="11.5" fill="white" font-weight="bold">① Scope</text>
+  <text x="740" y="666" text-anchor="middle" font-size="11.5" fill="white" font-weight="bold">② Analysis</text>
+  <text x="940" y="666" text-anchor="middle" font-size="11.5" fill="white" font-weight="bold">③ Inline Doc</text>
+  <text x="1140" y="666" text-anchor="middle" font-size="11.5" fill="white" font-weight="bold">④ Sphinx</text>
+  <text x="1380" y="666" text-anchor="middle" font-size="11.5" fill="white" font-weight="bold">⑤ Review</text>
+
+  <!-- Row 1 -->
+  <rect x="136" y="678" width="1328" height="34" fill="#EAF2FF"/>
+  <text x="320" y="700" text-anchor="middle" font-size="11" fill="#1A1A2E">Log &amp; Evidence Parsing</text>
+  <text x="540" y="700" text-anchor="middle" font-size="13" fill="#C0392B">●</text>
+  <text x="740" y="700" text-anchor="middle" font-size="13" fill="#C0392B">●</text>
+  <text x="940" y="700" text-anchor="middle" font-size="13" fill="#C0392B">●</text>
+  <text x="1140" y="700" text-anchor="middle" font-size="11" fill="#AAAAAA">—</text>
+  <text x="1380" y="700" text-anchor="middle" font-size="13" fill="#C0392B">●</text>
+
+  <!-- Row 2 -->
+  <rect x="136" y="712" width="1328" height="34" fill="#F7F9FC"/>
+  <text x="320" y="734" text-anchor="middle" font-size="11" fill="#1A1A2E">Code Search &amp; Context</text>
+  <text x="540" y="734" text-anchor="middle" font-size="13" fill="#C0392B">●</text>
+  <text x="740" y="734" text-anchor="middle" font-size="13" fill="#C0392B">●</text>
+  <text x="940" y="734" text-anchor="middle" font-size="13" fill="#C0392B">●</text>
+  <text x="1140" y="734" text-anchor="middle" font-size="11" fill="#AAAAAA">—</text>
+  <text x="1380" y="734" text-anchor="middle" font-size="11" fill="#AAAAAA">—</text>
+
+  <!-- Row 3 -->
+  <rect x="136" y="746" width="1328" height="34" fill="#EAF2FF"/>
+  <text x="320" y="768" text-anchor="middle" font-size="11" fill="#1A1A2E">Historical Pattern Lookup</text>
+  <text x="540" y="768" text-anchor="middle" font-size="13" fill="#C0392B">●</text>
+  <text x="740" y="768" text-anchor="middle" font-size="11" fill="#AAAAAA">—</text>
+  <text x="940" y="768" text-anchor="middle" font-size="11" fill="#AAAAAA">—</text>
+  <text x="1140" y="768" text-anchor="middle" font-size="11" fill="#AAAAAA">—</text>
+  <text x="1380" y="768" text-anchor="middle" font-size="13" fill="#C0392B">●</text>
+
+  <!-- Row 4 -->
+  <rect x="136" y="780" width="1328" height="34" fill="#F7F9FC"/>
+  <text x="320" y="802" text-anchor="middle" font-size="11" fill="#1A1A2E">Configuration Analysis</text>
+  <text x="540" y="802" text-anchor="middle" font-size="11" fill="#AAAAAA">—</text>
+  <text x="740" y="802" text-anchor="middle" font-size="13" fill="#C0392B">●</text>
+  <text x="940" y="802" text-anchor="middle" font-size="11" fill="#AAAAAA">—</text>
+  <text x="1140" y="802" text-anchor="middle" font-size="13" fill="#C0392B">●</text>
+  <text x="1380" y="802" text-anchor="middle" font-size="13" fill="#C0392B">●</text>
+
+  <!-- Row 5 -->
+  <rect x="136" y="814" width="1328" height="34" fill="#EAF2FF"/>
+  <text x="320" y="836" text-anchor="middle" font-size="11" fill="#1A1A2E">Structured Report Generation</text>
+  <text x="540" y="836" text-anchor="middle" font-size="11" fill="#AAAAAA">—</text>
+  <text x="740" y="836" text-anchor="middle" font-size="11" fill="#AAAAAA">—</text>
+  <text x="940" y="836" text-anchor="middle" font-size="13" fill="#C0392B">●</text>
+  <text x="1140" y="836" text-anchor="middle" font-size="13" fill="#C0392B">●</text>
+  <text x="1380" y="836" text-anchor="middle" font-size="13" fill="#C0392B">●</text>
+
+  <!-- Table border -->
+  <rect x="136" y="644" width="1328" height="204" rx="0" fill="none" stroke="#2471A3" stroke-width="1.5"/>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       LEGEND
+  ════════════════════════════════════════════════════════════════ -->
+  <rect x="136" y="862" width="200" height="22" rx="4" fill="#D6E4F0" stroke="#2C3E50" stroke-width="1.2"/>
+  <text x="236" y="877" text-anchor="middle" font-size="11" fill="#1A1A2E">Manual / Team Phase</text>
+
+  <rect x="352" y="862" width="220" height="22" rx="4" fill="#FADBD8" stroke="#C0392B" stroke-width="1.5"/>
+  <text x="462" y="877" text-anchor="middle" font-size="11" fill="#7B241C">Documentation Agent Phase</text>
+
+  <line x1="590" y1="873" x2="640" y2="873" stroke="#C0392B" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arr-red)"/>
+  <text x="650" y="877" font-size="11" fill="#C0392B">Agent interaction</text>
+
+  <line x1="800" y1="873" x2="850" y2="873" stroke="#E67E22" stroke-width="2" stroke-dasharray="8,4" marker-end="url(#arr-orange)"/>
+  <text x="860" y="877" font-size="11" fill="#E67E22">Maintenance feedback loop</text>
+
+  <text x="1100" y="877" font-size="13" fill="#C0392B">●</text>
+  <text x="1118" y="877" font-size="11" fill="#1A1A2E">= Skill active at this phase</text>
+
+</svg>
